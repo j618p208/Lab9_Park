@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <title>EECS 348 Lab Seven Practice 2</title>
+    <h1>EECS 348 Lab Seven Practice 2</h1>
+</head>
+
+<body>
+    <p id="p">Dummy Text</p>
+
+    Text Color Values: <br>
+    <input type="color" id="text_color" onchange="text_color()">
+    <br>
+    Border Color Values: <br>
+    <input type="color" id="border_color" onchange="border_color()">
+    <br>
+    Border Width: <br>
+    <input type="number" id="border_width" onchange="border_width()">
+
+<script>
+    document.getElementById('p').style.width = document.getElementById('p').innerHTML.length+1 + "ch";
+    function text_color() {
+        var text_color = document.getElementById('text_color').value;
+        document.getElementById('p').style.color = text_color;
+    }
+
+    function border_color() {
+        var border_color = document.getElementById('border_color').value;
+        document.getElementById('p').style.borderColor = border_color;
+    }
+
+    function border_width() {
+        var width = document.getElementById('border_width').value;
+        document.getElementById('p').style.borderWidth = width + "px";
+    }
+</script>
+
+</body>
+
+</html>

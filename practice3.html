@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <title>EECS 348 Lab Seven Practice 3</title>
+    <h1>EECS 348 Lab Seven Practice 3</h1>
+</head>
+
+<body>
+    <label for="p1">Password 1</label>
+    <input type="text" id="p1"> <br>
+    <label for="p2">Password 2</label>
+    <input type="text" id="p2"> <br>
+    <input type="button" value="Check" onclick="check()">
+
+    <p id="p"></p>
+
+    <script>
+        function check() {
+            if (document.getElementById('p1').value.length < 8) {
+                document.getElementById('p').innerHTML = "The password is too short!";
+                return;
+            }
+            if (document.getElementById('p1').value != document.getElementById('p2').value) {
+                document.getElementById('p').innerHTML = "The passwords do not match!";
+                return;
+            }
+            document.getElementById('p').innerHTML = "The passwords match!";
+        }
+    </script>
+</body>
+
+</html>
